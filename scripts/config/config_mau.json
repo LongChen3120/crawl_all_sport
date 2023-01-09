@@ -1,0 +1,835 @@
+{
+    "lịch":[
+        {
+            "type":1,
+            "type_lich":7,
+            "league":"SEA Games 31",
+            "sport_name":"liên minh huyền thoại",
+            "end_crawl":false,
+            "domain":"https://webthethao.vn/",
+            "url":"https://webthethao.vn/esports-sea-games/lich-thi-dau-lmht-sea-games-31-moi-nhat-rhbZlV87g.htm",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "xpath":"//*[contains(text(), 'vs')]/ancestor::tr",
+                "type_result":1,
+                "data":{
+                    "time_start":{
+                        "xpath":"(./td[@rowspan]/text() | ./preceding-sibling::tr/td[@rowspan]/text())[last()] | ./td[not(@rowspan)][1]/text()",
+                        "type_result":2,
+                        "type_find":3,
+                        "type_output":6,
+                        "time_format":"days/monthshours:minutes",
+                        "re":" |-",
+                        "replace":[
+                            {
+                                "type":2,
+                                "old_val":"year",
+                                "new_val":2021
+                            }
+                        ],
+                        "position_split":[0, 1]
+                    },
+                    "time_end":{
+                        "xpath":"(./td[@rowspan]/text() | ./preceding-sibling::tr/td[@rowspan]/text())[last()] | ./td[not(@rowspan)][1]/text()",
+                        "type_result":2,
+                        "type_find":3,
+                        "type_output":6,
+                        "re":" |-",
+                        "time_format":"days/monthshours:minutes",
+                        "replace":[
+                            {
+                                "type":2,
+                                "old_val":"year",
+                                "new_val":2021
+                            }
+                        ],
+                        "position_split":[0, 2]
+                    },
+                    "round":{
+                        "xpath":"(./ancestor::table/preceding-sibling::h3//text())[last()]",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "group":{
+        
+                    },
+                    "venue":{
+        
+                    },
+                    "list_team":{
+                        "xpath":"./following::*[@class = 'wikitable sortable plainrowheaders jquery-tablesorter']//tr[position()>1][position()<last()]",
+                        "type_result":1,
+                        "auto_increment":true,
+                        "key":"team_",
+                        "data":{
+                            "name":{
+                                "xpath":"./th/a/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "ensign":{
+                                "xpath":"./th//img/@src",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            }
+                        }
+                    },
+                    "events":{
+                    },
+                    "status":{
+        
+                    },
+                    "tags":{
+                        "xpath":"./following::*[@class = 'post-tag']/a",
+                        "type_result":1,
+                        "data":{
+                            "url":{
+                                "xpath":"./@href",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "text":{
+                                "xpath":"./text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            }
+                        }
+    
+                    }
+                }
+            },
+            "other_data":{
+                "content":{
+                    "title":{
+                        "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "content":{
+                        "xpath":"//*[@class = 'mw-parser-output']",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":8
+                    },
+                    "tags":{
+                        "xpath":"./following::*[@class = 'post-tag']/a",
+                        "type_result":1,
+                        "data":{
+                            "url":{
+                                "xpath":"./@href",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "text":{
+                                "xpath":"./text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            }
+                        }
+    
+                    }
+                },
+                "info":{
+                    "type_source":1,
+                    "type_crawl":1,
+                    "type_response":1,
+                    "link_info":{
+                        "xpath":"//*[@class = 'wikitable sortable plainrowheaders jquery-tablesorter']//a/@href",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":2
+                    },
+                    "content":{
+                        "title":{
+                            "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "content":{
+                            "xpath":"//*[@class = 'mw-parser-output']",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":8
+                        },
+                        "tags":{
+                            "xpath":"./following::*[@class = 'post-tag']/a",
+                            "type_result":1,
+                            "data":{
+                                "url":{
+                                    "xpath":"./@href",
+                                    "type_result":2,
+                                    "type_find":1,
+                                    "type_output":4
+                                },
+                                "text":{
+                                    "xpath":"./text()",
+                                    "type_result":2,
+                                    "type_find":1,
+                                    "type_output":4
+                                }
+                            }
+        
+                        }
+                    },
+                    "detail":{
+                        "type":7,
+                        "type_doi_tuong":2,
+                        "data":{
+                            "name":{
+                                "xpath":"(//*[@class = 'nowrap summary']/text())[1]",
+                                "type_result":2,
+                                "type_find":2,
+                                "type_output":4,
+                                "re":"^.*?(?=tại)"
+                            },
+                            "full_name":{
+                                
+                            },
+                            "IOC code":{
+                                "xpath":"//*[@title= 'Bảng mã IOC']/parent::*/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "logo":{
+                                "xpath":"//*[contains(@alt, 'Flag of')]/@src",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "founded":{
+    
+                            },
+                            "numb_of_members":{
+                                "xpath":"//*[contains(text(), 'Vận động viên')]/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "ground":{
+    
+                            },
+                            "capacity":{
+    
+                            },
+                            "owner":{
+    
+                            },
+                            "manager":{
+    
+                            },
+                            "league":{
+    
+                            },
+                            "website":{
+                                "xpath":"//*[contains(text(), 'Trang web')]/following-sibling::*//@href",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "tags":{
+                                "xpath":"./following::*[@class = 'post-tag']/a",
+                                "type_result":1,
+                                "data":{
+                                    "url":{
+                                        "xpath":"./@href",
+                                        "type_result":2,
+                                        "type_find":1,
+                                        "type_output":4
+                                    },
+                                    "text":{
+                                        "xpath":"./text()",
+                                        "type_result":2,
+                                        "type_find":1,
+                                        "type_output":4
+                                    }
+                                }
+            
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "kết quả":[
+        {
+            "type":2,
+            "type_ket_qua":1,
+            "league":"SEA Games 31",
+            "sport_name":"liên minh huyền thoại",
+            "end_crawl":false,
+            "domain":"https://webthethao.vn/",
+            "url":"https://webthethao.vn/esports-sea-games/lich-thi-dau-lmht-sea-games-31-moi-nhat-rhbZlV87g.htm",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "xpath":"//*[contains(text(), 'vs')]/ancestor::tr",
+                "type_result":1,
+                "data":{
+                    "time_start":{
+                        "xpath":"./td[1]/text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4,
+                        "time_format":"hours:minutes"   
+                    },
+                    "time_end":{
+                        "xpath":"./td[1]/text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4,
+                        "time_format":"hours:minutes"   
+                    },
+                    "round":{
+                        "xpath":"(./ancestor::table/preceding-sibling::h3//text())[last()]",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "group":{
+        
+                    },
+                    "venue":{
+        
+                    },
+                    "list_team":{
+                        "team_0":{
+                            "xpath":"./td[2]",
+                            "type_result":1,
+                            "data":{
+                                "name":{
+                                    "xpath":".//text()",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"^.*?(?=vs)"
+                                },
+                                "ensign":{
+        
+                                },
+                                "score":{
+                                    "xpath":"./following-sibling::*/text()",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"^.*?(?=-)"
+                                }
+                            }
+                        },
+                        "team_1":{
+                            "xpath":"./td[2]",
+                            "type_result":1,
+                            "data":{
+                                "name":{
+                                    "xpath":".//text()",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":4,
+                                    "re":"(?<=vs).*"
+                                },
+                                "ensign":{
+                                    
+                                },
+                                "score":{
+                                    "xpath":"./following-sibling::*/text()",
+                                    "type_result":4,
+                                    "type_find":2,
+                                    "type_output":5,
+                                    "re":"(?<=-).*"
+                                }
+                            }
+                        }
+                    },
+                    "events":{
+                    },
+                    "status":{
+        
+                    }
+                }
+            }
+        }
+    ],
+    "bảng xếp hạng":[
+        {
+            "type":4,
+            "type_bang_xep_hang":3,
+            "league":"SEA Games 31",
+            "sport_name":"điền kinh",
+            "end_crawl":false,
+            "domain":"https://www.qdnd.vn/",
+            "url":"https://www.qdnd.vn/the-thao/sea-games-31/tin-tuc/sea-games-31-dien-kinh-viet-nam-can-bang-ky-luc-cua-thai-lan-694968",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "xpath":"//table[not(@class)]/tbody[1]/tr[position()>2]",
+                "type_result":1,
+                "data":{
+                    "team":{
+                        "xpath":"./td[2]//text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4,
+                        "time_format":"hours:minutes"   
+                    },
+                    "rank":{
+                        "xpath":"./td[1]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "gold_medal":{
+                        "xpath":"./td[3]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "silver_medal":{
+                        "xpath":"./td[4]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "bronze_medal":{
+                        "xpath":"./td[5]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "total":{
+                        "xpath":"./td[6]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "tags":{
+                        "xpath":"//*[@class = 'px-3 py-2 bg-gray-100 m-1 cursor-pointer']/a",
+                        "type_result":1,
+                        "data":{
+                            "url":{
+                                "xpath":"./@href",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":9,
+                                "domain":"https://webthethao.vn"
+                            },
+                            "text":{
+                                "xpath":"./text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            }
+                        }
+    
+                    }
+                }
+            },
+            "other_data":{
+                "content":{
+                    "title":{
+                        "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "content":{
+                        "xpath":"//*[@class = 'mw-parser-output']",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":8
+                    },
+                    "tags":{
+                        "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":2
+                    }
+                },
+                "info":{
+                    "type_source":1,
+                    "type_crawl":1,
+                    "type_response":1,
+                    "link_info":{
+                        "xpath":"//*[@class = 'wikitable sortable plainrowheaders jquery-tablesorter']//a/@href",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":2
+                    },
+                    "content":{
+                        "title":{
+                            "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "content":{
+                            "xpath":"//*[@class = 'mw-parser-output']",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":8
+                        },
+                        "tags":{
+                            "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":2
+                        }
+                    },
+                    "detail":{
+                        "type":7,
+                        "type_doi_tuong":2,
+                        "data":{
+                            "name":{
+                                "xpath":"(//*[@class = 'nowrap summary']/text())[1]",
+                                "type_result":2,
+                                "type_find":2,
+                                "type_output":4,
+                                "re":"^.*?(?=tại)"
+                            },
+                            "full_name":{
+                                
+                            },
+                            "IOC code":{
+                                "xpath":"//*[@title= 'Bảng mã IOC']/parent::*/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "logo":{
+                                "xpath":"//*[contains(@alt, 'Flag of')]/@src",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "founded":{
+    
+                            },
+                            "numb_of_members":{
+                                "xpath":"//*[contains(text(), 'Vận động viên')]/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "ground":{
+    
+                            },
+                            "capacity":{
+    
+                            },
+                            "owner":{
+    
+                            },
+                            "manager":{
+    
+                            },
+                            "league":{
+    
+                            },
+                            "website":{
+                                "xpath":"//*[contains(text(), 'Trang web')]/following-sibling::*//@href",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "tags":{
+                                "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":2
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type":4,
+            "type_bang_xep_hang":1,
+            "league":"SEA Games 31",
+            "sport_name":"bóng đá nam",
+            "end_crawl":false,
+            "domain":"https://bongda24h.vn/",
+            "url":"https://bongda24h.vn/bong-da-nam-sea-games/bang-xep-hang-56.html",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "xpath":"//*[@class = 'm-calc']//tbody/tr",
+                "type_result":1,
+                "data":{
+                    "team":{
+                        "xpath":"./td[2]//text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4,
+                        "time_format":"hours:minutes"   
+                    },
+                    "rank":{
+                        "xpath":"./td[1]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "matches_played":{
+                        "xpath":"./td[3]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "wins":{
+                        "xpath":"./td[4]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "draws":{
+                        "xpath":"./td[5]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "losses":{
+                        "xpath":"./td[6]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "win_lose_difference":{
+                        "xpath":"./td[7]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "points":{
+                        "xpath":"./td[8]//text()",
+                        "type_result":4,
+                        "type_find":1,
+                        "type_output":5
+                    },
+                    "tags":{
+                        "xpath":"./following::*[@class = 'ul ul-tags']/li/a",
+                        "type_result":1,
+                        "data":{
+                            "url":{
+                                "xpath":"./@href",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":9,
+                                "domain":"https://bongda24h.vn"
+                            },
+                            "text":{
+                                "xpath":"./text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":4
+                            }
+                        }
+                    }
+                }
+            },
+            "other_data":{
+                "content":{
+                    "title":{
+                        "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":4
+                    },
+                    "content":{
+                        "xpath":"//*[@class = 'mw-parser-output']",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":8
+                    },
+                    "tags":{
+                        "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":2
+                    }
+                },
+                "info":{
+                    "type_source":1,
+                    "type_crawl":1,
+                    "type_response":1,
+                    "link_info":{
+                        "xpath":"//*[@class = 'wikitable sortable plainrowheaders jquery-tablesorter']//a/@href",
+                        "type_result":2,
+                        "type_find":1,
+                        "type_output":2
+                    },
+                    "content":{
+                        "title":{
+                            "xpath":"//*[@class = 'mw-page-title-main']/text()",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":4
+                        },
+                        "content":{
+                            "xpath":"//*[@class = 'mw-parser-output']",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":8
+                        },
+                        "tags":{
+                            "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                            "type_result":2,
+                            "type_find":1,
+                            "type_output":2
+                        }
+                    },
+                    "detail":{
+                        "type":7,
+                        "type_doi_tuong":2,
+                        "data":{
+                            "name":{
+                                "xpath":"(//*[@class = 'nowrap summary']/text())[1]",
+                                "type_result":2,
+                                "type_find":2,
+                                "type_output":4,
+                                "re":"^.*?(?=tại)"
+                            },
+                            "full_name":{
+                                
+                            },
+                            "IOC code":{
+                                "xpath":"//*[@title= 'Bảng mã IOC']/parent::*/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "logo":{
+                                "xpath":"//*[contains(@alt, 'Flag of')]/@src",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "founded":{
+    
+                            },
+                            "numb_of_members":{
+                                "xpath":"//*[contains(text(), 'Vận động viên')]/following-sibling::*/text()",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "ground":{
+    
+                            },
+                            "capacity":{
+    
+                            },
+                            "owner":{
+    
+                            },
+                            "manager":{
+    
+                            },
+                            "league":{
+    
+                            },
+                            "website":{
+                                "xpath":"//*[contains(text(), 'Trang web')]/following-sibling::*//@href",
+                                "type_result":4,
+                                "type_find":1,
+                                "type_output":4
+                            },
+                            "tags":{
+                                "xpath":"//*[@class = 'mw-normal-catlinks']//li//text()",
+                                "type_result":2,
+                                "type_find":1,
+                                "type_output":2
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "đối tượng":[
+        {
+            "type":7,
+            "type_doi_tuong":1,
+            "domain":"https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
+            "url":"https://vi.wikipedia.org/wiki/B%E1%BA%AFn_cung_t%E1%BA%A1i_%C4%90%E1%BA%A1i_h%E1%BB%99i_Th%E1%BB%83_thao_%C4%90%C3%B4ng_Nam_%C3%81_2021",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "name":""
+            }
+        },
+        {
+            "type":7,
+            "type_doi_tuong":2,
+            "domain":"https://vi.wikipedia.org/wiki/Trang_Ch%C3%ADnh",
+            "type_crawl":1,
+            "type_response":1,
+            "data":{
+                "name":{
+                    "xpath":"//*[@class = 'nowrap summary']/text()",
+                    "type_result":2,
+                    "type_find":2,
+                    "type_output":4,
+                    "re":"^([\\w\\-]+)"
+                },
+                "full_name":{
+                    
+                },
+                "IOC code":{
+                    "xpath":"//*[@title= 'Bảng mã IOC']/text()",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "logo":{
+                    "xpath":"//*[@alt= 'Flag of Indonesia.svg']/@src",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "founded":{
+
+                },
+                "members":{
+                    "xpath":"//*[contains(text(), 'Vận động viên')]/following-sibling::*/text()",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                },
+                "ground":{
+
+                },
+                "capacity":{
+
+                },
+                "owner":{
+
+                },
+                "manager":{
+
+                },
+                "league":{
+
+                },
+                "main_sponsor":{
+
+                },
+                "website":{
+                    "xpath":"//*[contains(text(), 'Trang web')]/following-sibling::*//@href",
+                    "type_result":4,
+                    "type_find":1,
+                    "type_output":4
+                }
+            }
+        }
+    ]
+}

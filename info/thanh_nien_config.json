@@ -1,0 +1,391 @@
+{
+    "data": {
+        "configDetail": {
+            "author": "//a[@class=\"cms-author\"]//text()",
+            "avatar": "//meta[@property=\"og:image\"]/@content",
+            "category": [
+                {
+                    "detect": "//meta[@property=\"article:section\"]/@content"
+                },
+                {
+                    "detect": "//div[@class=\"breadcrumb-detail\"]//li[@class=\"breadcrumb-item\"][last()]//text()"
+                }
+            ],
+            "content": [
+                {
+                    "detect": "//div[contains(@id,\"abody\")][1]",
+                    "remove": [
+                        {
+                            "type": 1,
+                            "value": "//div[contains(@class,\"details__meta\")][2]"
+                        },
+                        {
+                            "type": 1,
+                            "value": "//div[contains(@id,\"abody\")][1]/*[@class = \"morenews\"]"
+                        },
+                        {
+                            "type": 1,
+                            "value": "//div[contains(@id,\"abody\")][1]//script"
+                        },
+                        {
+                            "type": 1,
+                            "value": "//*[@id=\"adsWeb_AdsArticleMiddle\"]"
+                        },
+                        {
+                            "type": 1,
+                            "value": "//*[@id=\"adsWeb_AdsArticleAfterBody\"]"
+                        }
+                    ],
+                    "replace": [
+                        {
+                            "description": {
+                                "detect": "//tbody/tr/td/p/text()",
+                                "type": 1
+                            },
+                            "images": {
+                                "alt": "//img/@alt",
+                                "detect": "//img",
+                                "src": [
+                                    "//img/@data-src",
+                                    "//img/@src"
+                                ],
+                                "type": 1
+                            },
+                            "type": 4
+                        }
+                    ]
+                }
+            ],
+            "content_streaming": [
+                {
+                    "detail": {
+                        "date_time": {
+                            "detect": "//*[@class =\"cms-live-time\"]/@datetime",
+                            "valueType": 1
+                        },
+                        "football_minute": {
+                            "detect": "//*[@class =\"cms-live-time\"]/text()",
+                            "valueType": 1
+                        },
+                        "images": [
+                            {
+                                "detect": "//img/@data-src",
+                                "valueType": 4
+                            },
+                            {
+                                "detect": "//img/@src",
+                                "valueType": 4
+                            }
+                        ],
+                        "text": {
+                            "detect": "//text()",
+                            "valueType": 1
+                        },
+                        "videos": [
+                            {
+                                "detect": "//*[@data-video-src]/@data-video-src",
+                                "valueType": 4
+                            }
+                        ]
+                    },
+                    "detect": "//*[@id=\"livestream\"]/*",
+                    "valueType": 2
+                }
+            ],
+            "images": [
+                {
+                    "detect": "//div[contains(@id,\"abody\")][1]/descendant::img/@data-src",
+                    "valueType": 4
+                },
+                {
+                    "detect": "//div[contains(@id,\"abody\")][1]/descendant::img/@src",
+                    "valueType": 4
+                }
+            ],
+            "meta": {
+                "attribute": [
+                    "name",
+                    "content",
+                    "property",
+                    "http-equiv"
+                ],
+                "detect": {
+                    "xpath": "//meta"
+                },
+                "valueType": 2
+            },
+            "publishDate": [
+                {
+                    "detect": "//meta[@class=\"cms-date\"]/@content",
+                    "valueType": 3
+                },
+                {
+                    "detect": "//time[@class=\"time\"]/@datetime",
+                    "valueType": 3
+                }
+            ],
+            "sapo": [
+                {
+                    "detect": "//meta[@property=\"og:description\"]/@content"
+                }
+            ],
+            "siteId": {
+                "detect": 185,
+                "valueType": 0
+            },
+            "tag": [
+                {
+                    "detect": {
+                        "fields": [
+                            {
+                                "detect": "//a/@title",
+                                "field": "tag"
+                            },
+                            {
+                                "detect": "//a/@href",
+                                "field": "url"
+                            }
+                        ],
+                        "xpath": "//*[@class=\"details__tags\"]/a"
+                    },
+                    "valueType": 6
+                }
+            ],
+            "title": [
+                {
+                    "detect": "//meta[@property=\"og:title\"]/@content"
+                }
+            ],
+            "zones": [
+                {
+                    "detect": "//*[@class=\"breadcrumb\"]/li[position()>1]/a/text()",
+                    "valueType": 2
+                }
+            ]
+        },
+        "content_streaming": [
+            {
+                "date_time": {
+                    "detect": "//*[@class =\"cms-live-time\"]/@datetime",
+                    "valueType": 1
+                },
+                "detect": "//*[@id=\"livestream\"]/*",
+                "football_minute": {
+                    "detect": "//*[@class =\"cms-live-time\"]/text()",
+                    "valueType": 1
+                },
+                "valueType": 2
+            }
+        ],
+        "id": 85,
+        "linkDetailPaper_1": {
+            "detect": {
+                "re": "href=\"(\\S+\\d+.html)\"",
+                "type": 3,
+                "xpath": "//a[@href]"
+            },
+            "responseType": 1,
+            "valueType": 2
+        },
+        "linkDetailPaper_2": {
+            "detect": {
+                "re": "href=\"(\\S+\\d+.html)\"",
+                "type": 3,
+                "xpath": "//*[@id=\"abovethefold\"]//a[@href]"
+            },
+            "responseType": 1,
+            "valueType": 2
+        },
+        "paging_1": [
+            {
+                "param": {
+                    "paging": [
+                        {
+                            "index": 0,
+                            "type": 1,
+                            "value": "1->5"
+                        }
+                    ],
+                    "path": "?trang=param_0"
+                },
+                "type": 3,
+                "value": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@class= \"site-header__menu\"]/li[position() > 2]//a/@href"
+                    },
+                    "responseType": 1,
+                    "valueType": 2
+                }
+            }
+        ],
+        "save_mode": "1;2",
+        "topEvent_1": [
+            {
+                "detect": {
+                    "type": 1,
+                    "xpath": "//*[@class= \"trending\"]//li/a/@href"
+                },
+                "eventType": 2,
+                "nameEvent": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@class= \"headline\"]/text()"
+                    },
+                    "sourceType": 0,
+                    "valueType": 1
+                },
+                "topType": 3,
+                "valueType": 2
+            },
+            {
+                "detect": {
+                    "type": 1,
+                    "xpath": "//*[@id= \"share_tab\"]//@href"
+                },
+                "eventType": 1,
+                "nameEvent": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@id= \"Tab\"]/li[2]/a/text()"
+                    },
+                    "sourceType": 1,
+                    "valueType": 1
+                },
+                "topType": 6,
+                "valueType": 2
+            },
+            {
+                "detect": {
+                    "type": 1,
+                    "xpath": "//*[@id= \"news_tab\"]/descendant::a/@href"
+                },
+                "eventType": 1,
+                "nameEvent": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@id= \"Tab\"]/li[1]/a/text()"
+                    },
+                    "sourceType": 0,
+                    "valueType": 1
+                },
+                "topType": 3,
+                "valueType": 2
+            }
+        ],
+        "topEvent_2": [
+            {
+                "detect": {
+                    "type": 1,
+                    "xpath": "//*[@id= \"share_tab\"]//@href"
+                },
+                "eventType": 1,
+                "nameEvent": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@id= \"Tab\"]/li[2]/a/text()"
+                    },
+                    "sourceType": 1,
+                    "valueType": 1
+                },
+                "topType": 6,
+                "valueType": 2
+            },
+            {
+                "detect": {
+                    "type": 1,
+                    "xpath": "//*[@id= \"news_tab\"]/descendant::a/@href"
+                },
+                "eventType": 1,
+                "nameEvent": {
+                    "detect": {
+                        "type": 1,
+                        "xpath": "//*[@id= \"Tab\"]/li[1]/a/text()"
+                    },
+                    "sourceType": 0,
+                    "valueType": 1
+                },
+                "topType": 3,
+                "valueType": 2
+            }
+        ],
+        "topPaper_1": {
+            "detect": {
+                "re": "href=\"(\\S+\\d+.html)\"",
+                "type": 3,
+                "xpath": "//*[@class = \"l-content\"]/descendant::a[@href]"
+            },
+            "responseType": 1,
+            "topType": 1,
+            "valueType": 2
+        },
+        "topPaper_2": {
+            "detect": {
+                "type": 1,
+                "xpath": "//*[@class= \"highlight\" or @class = \"feature\"]/descendant::a/@href"
+            },
+            "responseType": 1,
+            "topType": 2,
+            "valueType": 2
+        },
+        "topPaper_3": {
+            "detect": {
+                "type": 1,
+                "xpath": "//*[@id= \"highlightbox\"]/descendant::a[@class]/@href"
+            },
+            "responseType": 1,
+            "topType": 5,
+            "valueType": 2
+        },
+        "url": [
+            {
+                "isPaging": false,
+                "linkDetailPaper": 1,
+                "paging": 1,
+                "topEvent_": 1,
+                "topPaper_": 1,
+                "value": "https://thanhnien.vn/"
+            },
+            {
+                "isPaging": true,
+                "linkDetailPaper": 1,
+                "paging": 1,
+                "topEvent_": 1,
+                "topPaper_": 2,
+                "value": "https://thanhnien.vn/"
+            },
+            {
+                "isPaging": false,
+                "linkDetailPaper": 1,
+                "paging": 1,
+                "topPaper_": 3,
+                "value": "https://thanhnien.vn/video/"
+            }
+        ],
+        "url_topic": [
+            {
+                "isPaging": true,
+                "linkDetailPaper": 1,
+                "paging": 2,
+                "topic": "World Cup",
+                "value": "https://thanhnien.vn/tim-kiem/?q=param_0&m=0&t=&c=0&y=-1&o=&trang=param_1"
+            },
+            {
+                "isPaging": false,
+                "linkDetailPaper": 2,
+                "paging": 2,
+                "topic": "World Cup Live",
+                "value": "https://thanhnien.vn/"
+            },
+            {
+                "isPaging": false,
+                "linkDetailPaper": 2,
+                "paging": 2,
+                "topic": "AFF Cup Live",
+                "value": "https://thanhnien.vn/"
+            }
+        ],
+        "website": "https://thanhnien.vn/"
+    },
+    "status": 200
+}

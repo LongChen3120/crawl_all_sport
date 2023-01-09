@@ -1,0 +1,29 @@
+"tag": [
+    {
+      "detect": {
+        "xpath": "//*[@class=\"details__tags\"]/a",
+        "fields": [
+        {
+          "field": "tag",
+          "detect": "//a/@title"
+        },
+        {
+          "field": "url",
+          "detect": "//a/@href"
+        }
+        ]
+      },
+      "valueType": 6
+      }
+    ]
+
+    "tag":{
+        "url":{
+            "xpath":"//*[@class = 'details__tags']/a/@href",
+            "valueType": 1
+        },
+        "text":{
+            "xpath":"//*[@class = 'details__tags']/a/text()",
+            "valueType": 1
+        }
+    },
