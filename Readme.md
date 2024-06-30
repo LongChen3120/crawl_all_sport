@@ -1,4 +1,4 @@
-- Em thật sự xin lỗi Anh/Chị nhà tuyển dụng!!!
+### Em thật sự xin lỗi Anh/Chị nhà tuyển dụng!!!
 + Dự án này là đồ án thời sinh viên của em và hồi đó em chểnh mảng học tập nên dự án còn rất sơ sài.
 + Em hy vọng được Anh/Chị nhà tuyển dụng trao cơ hội để em có thể bắt đầu lại trên con đường sự nghiệp.
 + Em cảm ơn Anh/Chị đã đọc ạ!!
